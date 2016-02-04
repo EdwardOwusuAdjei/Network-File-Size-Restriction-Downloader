@@ -184,7 +184,7 @@ void download(int parts,int arr[],int endarr[],string url)
 		cout<<buffer2;	
 	}
 	
-	cout<<"Done...See..File limit Set by proxy servers like squid and etc sucks....rules sucks"
+	cout<<"Done...See..File limit Set by proxy servers like squid and etc sucks....rules sucks";
     
 	
 }
