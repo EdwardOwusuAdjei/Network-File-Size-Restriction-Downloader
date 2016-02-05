@@ -168,7 +168,7 @@ void download(int parts,int arr[],int endarr[],string url)
 
 	FILE *stream,*stream2;
 	
-	char buffer[1024],buffer2[512];//modify if you think u dont waste memory
+	char buffer[512],buffer2[512];//modify if you think u dont waste memory
 	if(!(stream = popen(run.c_str(),"r"))){
 			
 	}
@@ -176,15 +176,15 @@ void download(int parts,int arr[],int endarr[],string url)
 		cout<<buffer;	
 	}
 	
-	pclose(stream);//dont ask me why i didnt use *in again.. :(
+	pclose(stream);
 	if(!(stream2 = popen(concatenate.c_str(),"r"))){
 			
 	}
 	while(fgets(buffer2,sizeof(buff),in) != NULL){
 		cout<<buffer2;	
 	}
-	
+	pclose(stream2);
 	cout<<"Done...See..File limit Set by proxy servers like squid and etc sucks....rules sucks";
-    
+    cout<<"Wait till you dont see any curl progress in term";
 	
 }
